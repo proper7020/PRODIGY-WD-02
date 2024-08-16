@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Navigation Menu</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+    
+      .nav-item:hover {
+        background-color: #f63b8f; 
+        color: rgb(255, 11, 11);
+      }
+      .scrolled {
+        background-color: #098bc879; 
+      }
+      .gradient-background {
+        background: linear-gradient(45deg, #00a02d, #02b63b);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-green-50">
+
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full bg-white shadow-md transition-all duration-300"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold gradient-background">
+            ProDigy Infotech
+          </div>
+          <ul class="flex space-x-6">
+            <li class="nav-item">
+              <a href="#home" class="text-gray-800 hover:text-white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="text-gray-800 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="text-gray-800 hover:text-white">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="text-gray-800 hover:text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <section
+      id="home"
+      class="h-screen flex items-center justify-center bg-green-50"
+    >
+      <h1 class="text-4xl font-bold text-gray-800 ">
+        Welcome to ProDigy Infotech
+      </h1>
+      <div>
+            <!-- "Infotech" is a shorthand term for "Information Technology," 
+            which encompasses the use of computers, software, networks, 
+            and other electronic devices to store, retrieve, transmit, and 
+            manipulate data. It plays a crucial role in various sectors such 
+            as business, healthcare, education, and government, enabling efficient 
+            and effective information management. Key areas within infotech include:
+
+            Software Development: Creating applications and programs that run on
+             computers and other devices.
+            Network Management: Ensuring that computer networks are secure,
+             reliable, and efficient.
+            Data Management: Storing, organizing, and analyzing data to support 
+            decision-making.
+            Cybersecurity: Protecting systems and data from digital attacks and
+             unauthorized access.
+            Technical Support: Providing assistance and solutions for technology-related issues.
+            Overall, infotech drives innovation, enhances productivity, and supports the digital 
+            infrastructure of modern society. -->
+
+
+
+
+
+
+</div>
+    </section>
+    <section
+      id="services"
+      class="h-screen flex items-center justify-center bg-red-300 "
+    >
+      <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+    </section>
+    <section
+      id="about"
+      class="h-screen flex items-center justify-center bg-blue-300"
+    >
+      <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
+    </section>
+    <section
+      id="contact"
+      class="h-screen flex items-center justify-center bg-yellow-300"
+    >
+      <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+    </section>
+
+    <script>
+      
+      window.addEventListener("scroll", function () {
+        var navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
